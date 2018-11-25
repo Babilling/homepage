@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" media="screen" href="index.css">
+		<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	</head>
+	<body>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function PlaySound(soundobj) {
+				var thissound=document.getElementById(soundobj);
+				thissound.play();
+			}
+
+			function StopSound(soundobj) {
+			var thissound=document.getElementById(soundobj);
+				thissound.pause();
+				thissound.currentTime = 0;
+			}
+			$(document).ready(function() {
+			  // mute button click events
+			  $('#cmd-mute').click(function() {
+				let audioElm = document.getElementById('jinglebells'); audioElm.muted = !audioElm.muted;
+				let audioElm2 = document.getElementById('terminator'); audioElm2.muted = !audioElm2.muted;
+				$('#cmd-mute').addClass('hidden');
+				$('#cmd-unmute').removeClass('hidden');
+				return false;
+			  });
+			  
+			  $('#cmd-unmute').click(function() {
+				let audioElm = document.getElementById('jinglebells'); audioElm.muted = !audioElm.muted;
+				let audioElm2 = document.getElementById('terminator'); audioElm2.muted = !audioElm2.muted;
+				$('#cmd-unmute').addClass('hidden');
+				$('#cmd-mute').removeClass('hidden');
+				return false;
+			  });
+			 
+			});	
+		</script>
+		<div class="buttons-mute">
+			<a id="cmd-mute" class="btn btn-mute hidden"><i class="fa fa-volume-up"></i></a>
+			<a id="cmd-unmute" class="btn btn-mute"><i class="fa fa-volume-off"></i></a>
+		</div>
+		<div class="imageGrid">
+			<a href="http://www.google.fr" onmouseover="PlaySound('jinglebells')" onmouseout="StopSound('jinglebells')">
+			  <div class="tile" style="background-image: url('/rss/images/flappysanta.png');">
+				<div class="textWrapper"><h2>Flappy Santa</h2>
+				  <div class="content">Cet hiver, sa route est semée d'embûches.</div>
+				</div>
+			  </div>
+			</a>
+			<a href="http://www.google.com" onmouseover="PlaySound('terminator')" onmouseout="StopSound('terminator')">
+			  <div class="tile" style="background-image: url('/rss/images/santarminator.png');">
+				<div class="textWrapper"><h2>Santarminator</h2>
+				  <div class="content">Quand les elfes décident de voler ses cadeaux, il ne lui reste plus qu'une seule option...</div>
+				</div>
+			  </div>
+			</a>
+		</div>
+	</body>
+	<audio id='jinglebells' src='/rss/sound/jinglebellsinstru.ogg' muted="true"/>
+	<audio id='terminator' src='/rss/sound/terminator.ogg' muted="true"/>
+</html>
