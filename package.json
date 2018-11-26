@@ -1,0 +1,29 @@
+{
+  "name": "homepage",
+  "version": "0.1.0",
+  "description": "Babilling homepage - A basic NodeJS Express website",
+  "homepage": "https://github.com/Babilling/homepage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Babilling/homepage"
+  },
+  "bugs": {
+    "url": "https://github.com/Babilling/homepage/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT License",
+      "url": "https://github.com/Babilling/homepage/blob/master/LICENSE"
+    }
+  ],
+  "author": {
+    "name": "Babilling",
+    "email": "babilling@gmail.com"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
