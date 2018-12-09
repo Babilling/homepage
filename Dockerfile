@@ -9,4 +9,6 @@ USER 0
 
 RUN chmod +x homepage/public/scripts/entrypoint.sh
 
+HEALTHCHECK CMD netstat -an | grep 8080 > /dev/null; if [ 0 != $? ]; then exit 1; fi;
+
 ENTRYPOINT ["sh","homepage/public/scripts/entrypoint.sh"]
