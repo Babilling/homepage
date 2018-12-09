@@ -4,6 +4,6 @@ COPY . /homepage/
 
 USER 0
 
-RUN chmod +x homepage/scripts/entrypoint.sh
+RUN chmod +x homepage/public/scripts/entrypoint.sh
 
-ENTRYPOINT ["sh","homepage/scripts/entrypoint.sh"]
+ENTRYPOINT ["sh","homepage/public/scripts/entrypoint.sh"]
