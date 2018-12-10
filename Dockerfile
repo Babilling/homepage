@@ -2,8 +2,8 @@ FROM node:8.12.0-alpine
 
 COPY . /homepage/
 
-ENV FLAPPY_SANTA_URL http://bit.ly/beta-flappysanta
-ENV SANTARMINATOR_URL http://bit.ly/beta-santarminator
+ENV FLAPPY_SANTA_URL=http://bit.ly/beta-flappysanta
+ENV SANTARMINATOR_URL=http://bit.ly/beta-santarminator
 
 USER 0
 
